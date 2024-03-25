@@ -1,0 +1,68 @@
+import random
+print("""
+Поле чудес
+Мы загадываем слово, а ты должен его отгадать
+Мы скажем сколько в этом слове букв
+Ты можешь узнать у меня есть ли какая буква в этом слове
+""")
+
+q1 = input("Хочешь сыграть?: ")
+while q1 != "Нет":
+    word = random.randint(1,20)
+    if word == 1:
+        word = "фиолетовый"
+    elif word == 2:
+        word = "шланг"
+    elif word == 3:
+        word = "крутой"
+    elif word == 4:
+        word = "один"
+    elif word == 5:
+        word = "шнур"
+    elif word == 6:
+        word = "привет"
+    elif word == 7:
+        word = "макароны"
+    elif word == 8:
+        word = "спать"
+    elif word == 9:
+        word = "бургер"
+    elif word == 10:
+        word = "синий"
+    elif word == 11:
+        word = "пасхалка"
+    elif word == 12:
+        word = "погода"
+    elif word == 13:
+        word = "браузер"
+    elif word == 14:
+        word = "настройки"
+    elif word == 15:
+        word = "завод"
+    elif word == 16:
+        word = "здание"
+    elif word == 17:
+        word = "стрелка"
+    elif word == 18:
+        word = "запуск"
+    elif word == 19:
+        word = "лук"
+    elif word == 20:
+        word = "клавиша"
+
+    print("В этом слове",len(word), "букв")
+
+    print("Можешь узнать у меня какая буква в этом слове. У тебя 5 попыток")
+    for i in range(5):
+        a = input("Какую букву хочешь спросить? ")
+        if a in word:
+            print("Это буква есть в слове")
+        else:
+            print("Этой буквы нету в слове")
+
+    q2 = input("Введите слово: ")
+    if q2 == word:
+        print("Вы угадали слово!")
+    else:
+        print("Вы не угадали слово")
+    q1 = input("Хотите сыграть ещё? ")
